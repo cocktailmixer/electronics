@@ -20,7 +20,9 @@ fp-lib-table
 sym-lib-table
 
 # Netlist files (exported from Eeschema)
-*.net
+# include netlist files for portability
+# see http://docs.kicad-pcb.org/5.1.2/en/getting_started_in_kicad/getting_started_in_kicad.html#note-about-portability-of-kicad-project-files
+# *.net
 
 # Autorouter files (exported from Pcbnew)
 *.dsn
