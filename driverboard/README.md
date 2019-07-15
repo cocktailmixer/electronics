@@ -10,4 +10,4 @@ The driverboard is connected by a ribbon cable and a seperate power cable to the
 
 The controllerboard is an SPI bus master and passes data to the driverboards which are connected in series as an SPI bus daisy-chain. The end of the chain is automatically recognized by the hardware and the data looped back to the master.
 
-The driver chip used is the ON Semi NCV7240 which features fault reporting (overload and over temperature protection, open load / short to ground and SPI frame error detection), internal output clamping diodes and a 3.3V/5V compatible SPI interface. 
+The driver chip used is the ON Semi NCV7240 which features fault reporting (overload and overtemperature protection, open load / short to ground and SPI frame error detection), internal output clamping diodes and a 3.3V / 5V compatible SPI interface. 
