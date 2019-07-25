@@ -1,7 +1,7 @@
 # Controllerboard
 ### What is the status?
 - design v01: work in progress
-- schematic v01: todo
+- schematic v01: work in progress
 - layout v01: todo
 - gerbers and bom: todo
 - testing: todo
