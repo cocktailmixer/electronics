@@ -805,97 +805,6 @@ Wire Bus Line
 Text Label 6400 2300 0    50   ~ 0
 clk_in
 $Comp
-L Amplifier_Current:INA181 U?
-U 1 1 5D6F1CDD
-P 3150 2550
-F 0 "U?" H 3350 2750 50  0000 L CNN
-F 1 "INA181A3" H 3250 2650 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 3200 2600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/ina181.pdf" H 3300 2700 50  0001 C CNN
-	1    3150 2550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3050 2850 3250 2850
-Wire Wire Line
-	3050 2850 3050 2950
-Connection ~ 3050 2850
-Wire Wire Line
-	3150 2250 3050 2250
-Wire Wire Line
-	3350 2250 3450 2250
-$Comp
-L power:GND #PWR?
-U 1 1 5D72EFA8
-P 3450 2250
-F 0 "#PWR?" H 3450 2000 50  0001 C CNN
-F 1 "GND" H 3455 2077 50  0000 C CNN
-F 2 "" H 3450 2250 50  0001 C CNN
-F 3 "" H 3450 2250 50  0001 C CNN
-	1    3450 2250
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	3050 2250 3050 2150
-Connection ~ 3050 2250
-$Comp
-L power:+3.3V #PWR?
-U 1 1 5D739E20
-P 3050 2150
-F 0 "#PWR?" H 3050 2000 50  0001 C CNN
-F 1 "+3.3V" H 3050 2300 50  0000 C CNN
-F 2 "" H 3050 2150 50  0001 C CNN
-F 3 "" H 3050 2150 50  0001 C CNN
-	1    3050 2150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 5D723314
-P 3250 2250
-F 0 "C?" V 3021 2250 50  0000 C CNN
-F 1 "100n" V 3112 2250 50  0000 C CNN
-F 2 "" H 3250 2250 50  0001 C CNN
-F 3 "~" H 3250 2250 50  0001 C CNN
-	1    3250 2250
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small R?
-U 1 1 5D73F092
-P 2550 2550
-F 0 "R?" H 2350 2700 50  0000 L CNN
-F 1 "10m" H 2300 2600 50  0000 L CNN
-F 2 "" H 2550 2550 50  0001 C CNN
-F 3 "~" H 2550 2550 50  0001 C CNN
-F 4 "0.5W" H 2300 2500 50  0000 L CNN "Power"
-F 5 "1%" H 2350 2400 50  0000 L CNN "Tolerance"
-	1    2550 2550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2550 2450 2550 2350
-Wire Wire Line
-	2550 2650 2550 2750
-Wire Wire Line
-	2550 2350 2750 2350
-Wire Wire Line
-	2750 2350 2750 2450
-Connection ~ 2550 2350
-Wire Wire Line
-	2550 2350 2550 2250
-Wire Wire Line
-	2550 2750 2750 2750
-Wire Wire Line
-	2750 2750 2750 2650
-Connection ~ 2550 2750
-Wire Wire Line
-	2550 2750 2550 2850
-Wire Wire Line
-	2750 2450 2850 2450
-Wire Wire Line
-	2850 2650 2750 2650
-$Comp
 L 74xx:74HC02 U?
 U 1 1 5D77CB6F
 P 1300 4550
@@ -909,75 +818,53 @@ $EndComp
 $Comp
 L 74xx:74HC02 U?
 U 2 1 5D77ED93
-P 2000 4550
-F 0 "U?" H 2000 4875 50  0000 C CNN
-F 1 "74HC02" H 2000 4784 50  0000 C CNN
-F 2 "" H 2000 4550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc02" H 2000 4550 50  0001 C CNN
-	2    2000 4550
+P 1300 4950
+F 0 "U?" H 1300 5275 50  0000 C CNN
+F 1 "74HC02" H 1300 5184 50  0000 C CNN
+F 2 "" H 1300 4950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc02" H 1300 4950 50  0001 C CNN
+	2    1300 4950
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74HC02 U?
 U 3 1 5D7810DF
-P 2750 4550
-F 0 "U?" H 2750 4875 50  0000 C CNN
-F 1 "74HC02" H 2750 4784 50  0000 C CNN
-F 2 "" H 2750 4550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc02" H 2750 4550 50  0001 C CNN
-	3    2750 4550
+P 1300 5350
+F 0 "U?" H 1300 5675 50  0000 C CNN
+F 1 "74HC02" H 1300 5584 50  0000 C CNN
+F 2 "" H 1300 5350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc02" H 1300 5350 50  0001 C CNN
+	3    1300 5350
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74HC02 U?
 U 4 1 5D783699
-P 3450 4600
-F 0 "U?" H 3450 4925 50  0000 C CNN
-F 1 "74HC02" H 3450 4834 50  0000 C CNN
-F 2 "" H 3450 4600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc02" H 3450 4600 50  0001 C CNN
-	4    3450 4600
+P 2100 4950
+F 0 "U?" H 2100 5275 50  0000 C CNN
+F 1 "74HC02" H 2100 5184 50  0000 C CNN
+F 2 "" H 2100 4950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc02" H 2100 4950 50  0001 C CNN
+	4    2100 4950
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74HC02 U?
 U 5 1 5D785E1E
-P 4250 4550
-F 0 "U?" H 4480 4596 50  0000 L CNN
-F 1 "74HC02" H 4480 4505 50  0000 L CNN
-F 2 "" H 4250 4550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc02" H 4250 4550 50  0001 C CNN
-	5    4250 4550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_FET:IRF8721PBF-1 Q?
-U 1 1 5D797C3E
-P 2450 3050
-F 0 "Q?" H 2650 3150 50  0000 L CNN
-F 1 "IRF8721" H 2650 3050 50  0000 L CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2650 2950 50  0001 L CNN
-F 3 "http://www.irf.com/product-info/datasheets/data/irf8721pbf-1.pdf" H 2350 3050 50  0001 L CNN
-	1    2450 3050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_FET:DMN2050L Q?
-U 1 1 5D7E418A
-P 4750 5250
-F 0 "Q?" H 4956 5296 50  0000 L CNN
-F 1 "DMN2050L" H 4956 5205 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 4950 5175 50  0001 L CIN
-F 3 "http://www.diodes.com/assets/Datasheets/ds31502.pdf" H 4750 5250 50  0001 L CNN
-	1    4750 5250
+P 4650 2650
+F 0 "U?" H 4880 2696 50  0000 L CNN
+F 1 "74HC02" H 4880 2605 50  0000 L CNN
+F 2 "" H 4650 2650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc02" H 4650 2650 50  0001 C CNN
+	5    4650 2650
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_Small R?
 U 1 1 5D85AEEE
 P 2050 3050
-F 0 "R?" V 1950 3000 50  0000 L CNN
-F 1 "10" V 1850 3000 50  0000 L CNN
+F 0 "R?" V 2250 3000 50  0000 L CNN
+F 1 "10" V 2150 3000 50  0000 L CNN
 F 2 "" H 2050 3050 50  0001 C CNN
 F 3 "~" H 2050 3050 50  0001 C CNN
 	1    2050 3050
@@ -987,17 +874,6 @@ Wire Wire Line
 	1850 3050 1950 3050
 Wire Wire Line
 	2150 3050 2250 3050
-$Comp
-L power:GND #PWR?
-U 1 1 5D70AD6F
-P 3050 2950
-F 0 "#PWR?" H 3050 2700 50  0001 C CNN
-F 1 "GND" H 3055 2777 50  0000 C CNN
-F 2 "" H 3050 2950 50  0001 C CNN
-F 3 "" H 3050 2950 50  0001 C CNN
-	1    3050 2950
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5D8BAD46
@@ -1075,8 +951,6 @@ Wire Wire Line
 	1450 3450 2550 3450
 Wire Wire Line
 	2550 3450 2550 3550
-Wire Wire Line
-	2550 3450 2550 3250
 Connection ~ 2550 3450
 $Comp
 L power:+5V #PWR?
@@ -1150,13 +1024,321 @@ $Comp
 L Driver_FET:MCP1416 U?
 U 1 1 5D7CE5DE
 P 1450 3050
-F 0 "U?" H 1750 3300 50  0000 L CNN
-F 1 "MCP1416" H 1750 3200 50  0000 L CNN
+F 0 "U?" H 1500 3400 50  0000 L CNN
+F 1 "MCP1416" H 1500 3300 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5" H 1450 2650 50  0001 C CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20002092F.pdf" H 1250 3300 50  0001 C CNN
 	1    1450 3050
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	2550 3450 2550 3250
+$Comp
+L power:GND #PWR?
+U 1 1 5D70AD6F
+P 3050 2950
+F 0 "#PWR?" H 3050 2700 50  0001 C CNN
+F 1 "GND" H 3055 2777 50  0000 C CNN
+F 2 "" H 3050 2950 50  0001 C CNN
+F 3 "" H 3050 2950 50  0001 C CNN
+	1    3050 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRF8721PBF-1 Q?
+U 1 1 5D797C3E
+P 2450 3050
+F 0 "Q?" H 2650 3150 50  0000 L CNN
+F 1 "IRF8721" H 2650 3050 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2650 2950 50  0001 L CNN
+F 3 "http://www.irf.com/product-info/datasheets/data/irf8721pbf-1.pdf" H 2350 3050 50  0001 L CNN
+	1    2450 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 2650 2750 2650
+Wire Wire Line
+	2750 2450 2850 2450
+Wire Wire Line
+	2550 2750 2550 2850
+Connection ~ 2550 2750
+Wire Wire Line
+	2750 2750 2750 2650
+Wire Wire Line
+	2550 2750 2750 2750
+Wire Wire Line
+	2750 2350 2750 2450
+Wire Wire Line
+	2550 2350 2750 2350
+Wire Wire Line
+	2550 2650 2550 2750
+Wire Wire Line
+	2550 2450 2550 2350
+$Comp
+L Device:R_Small R?
+U 1 1 5D73F092
+P 2550 2550
+F 0 "R?" H 2350 2700 50  0000 L CNN
+F 1 "10m" H 2300 2600 50  0000 L CNN
+F 2 "" H 2550 2550 50  0001 C CNN
+F 3 "~" H 2550 2550 50  0001 C CNN
+F 4 "0.5W" H 2300 2500 50  0000 L CNN "Power"
+F 5 "1%" H 2350 2400 50  0000 L CNN "Tolerance"
+	1    2550 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5D723314
+P 3250 2250
+F 0 "C?" V 3021 2250 50  0000 C CNN
+F 1 "100n" V 3112 2250 50  0000 C CNN
+F 2 "" H 3250 2250 50  0001 C CNN
+F 3 "~" H 3250 2250 50  0001 C CNN
+	1    3250 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5D739E20
+P 3050 2150
+F 0 "#PWR?" H 3050 2000 50  0001 C CNN
+F 1 "+3.3V" H 3050 2300 50  0000 C CNN
+F 2 "" H 3050 2150 50  0001 C CNN
+F 3 "" H 3050 2150 50  0001 C CNN
+	1    3050 2150
+	1    0    0    -1  
+$EndComp
+Connection ~ 3050 2250
+Wire Wire Line
+	3050 2250 3050 2150
+$Comp
+L power:GND #PWR?
+U 1 1 5D72EFA8
+P 3450 2250
+F 0 "#PWR?" H 3450 2000 50  0001 C CNN
+F 1 "GND" H 3455 2077 50  0000 C CNN
+F 2 "" H 3450 2250 50  0001 C CNN
+F 3 "" H 3450 2250 50  0001 C CNN
+	1    3450 2250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3350 2250 3450 2250
+Wire Wire Line
+	3150 2250 3050 2250
+Connection ~ 3050 2850
+Wire Wire Line
+	3050 2850 3050 2950
+Wire Wire Line
+	3050 2850 3250 2850
+$Comp
+L Amplifier_Current:INA181 U?
+U 1 1 5D6F1CDD
+P 3150 2550
+F 0 "U?" H 3350 2750 50  0000 L CNN
+F 1 "INA181A3" H 3250 2650 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 3200 2600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ina181.pdf" H 3300 2700 50  0001 C CNN
+	1    3150 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky_Small D?
+U 1 1 5DCC8719
+P 2550 2100
+F 0 "D?" H 2550 2305 50  0000 C CNN
+F 1 "D_Schottky_Small" H 2550 2214 50  0000 C CNN
+F 2 "" V 2550 2100 50  0001 C CNN
+F 3 "~" V 2550 2100 50  0001 C CNN
+	1    2550 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5DD430F6
+P 6250 5250
+F 0 "J?" H 6330 5242 50  0000 L CNN
+F 1 "release valve" H 6330 5151 50  0000 L CNN
+F 2 "" H 6250 5250 50  0001 C CNN
+F 3 "~" H 6250 5250 50  0001 C CNN
+	1    6250 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:DMN2050L Q?
+U 1 1 5D7E418A
+P 5750 5700
+F 0 "Q?" H 5956 5746 50  0000 L CNN
+F 1 "DMN2050L" H 5956 5655 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5950 5625 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/ds31502.pdf" H 5750 5700 50  0001 L CNN
+	1    5750 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky_Small D?
+U 1 1 5DD35105
+P 5850 5300
+F 0 "D?" H 5850 5505 50  0000 C CNN
+F 1 "D_Schottky_Small" H 5850 5414 50  0000 C CNN
+F 2 "" V 5850 5300 50  0001 C CNN
+F 3 "~" V 5850 5300 50  0001 C CNN
+	1    5850 5300
+	0    1    1    0   
+$EndComp
+Connection ~ 2550 2350
+Wire Wire Line
+	2550 2200 2550 2250
+Wire Wire Line
+	2350 2050 2400 2050
+Wire Wire Line
+	2400 1950 2400 2050
+Wire Wire Line
+	2400 1950 2550 1950
+Wire Wire Line
+	2550 1950 2550 2000
+Wire Wire Line
+	2350 2150 2400 2150
+Wire Wire Line
+	2400 2150 2400 2250
+Wire Wire Line
+	2400 2250 2550 2250
+Connection ~ 2550 2250
+Wire Wire Line
+	2550 2250 2550 2350
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5DD3EBEA
+P 2150 2050
+F 0 "J?" H 2068 2267 50  0000 C CNN
+F 1 "pump" H 2068 2176 50  0000 C CNN
+F 2 "" H 2150 2050 50  0001 C CNN
+F 3 "~" H 2150 2050 50  0001 C CNN
+	1    2150 2050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 1950 2550 1850
+Connection ~ 2550 1950
+$Comp
+L power:+12V #PWR?
+U 1 1 5DF97AD5
+P 2550 1850
+F 0 "#PWR?" H 2550 1700 50  0001 C CNN
+F 1 "+12V" H 2565 2023 50  0000 C CNN
+F 2 "" H 2550 1850 50  0001 C CNN
+F 3 "" H 2550 1850 50  0001 C CNN
+	1    2550 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5DFA26DE
+P 3650 2550
+F 0 "R?" V 3850 2500 50  0000 L CNN
+F 1 "?" V 3750 2500 50  0000 L CNN
+F 2 "" H 3650 2550 50  0001 C CNN
+F 3 "~" H 3650 2550 50  0001 C CNN
+	1    3650 2550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DFC1F85
+P 3850 2750
+F 0 "C?" H 3950 2800 50  0000 L CNN
+F 1 "dnp" H 3950 2700 50  0000 L CNN
+F 2 "" H 3850 2750 50  0001 C CNN
+F 3 "~" H 3850 2750 50  0001 C CNN
+	1    3850 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 2550 3450 2550
+Wire Wire Line
+	3750 2550 3850 2550
+Wire Wire Line
+	3850 2550 3850 2650
+Wire Wire Line
+	3850 2550 4050 2550
+Connection ~ 3850 2550
+$Comp
+L power:GND #PWR?
+U 1 1 5DFEB814
+P 3850 2950
+F 0 "#PWR?" H 3850 2700 50  0001 C CNN
+F 1 "GND" H 3855 2777 50  0000 C CNN
+F 2 "" H 3850 2950 50  0001 C CNN
+F 3 "" H 3850 2950 50  0001 C CNN
+	1    3850 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 2950 3850 2850
+Text Notes 3500 3700 0    50   ~ 0
+add MOSFET overcurrent protection?
+Wire Wire Line
+	6050 5250 6000 5250
+Wire Wire Line
+	6000 5150 5850 5150
+Wire Wire Line
+	6000 5150 6000 5250
+Wire Wire Line
+	6050 5350 6000 5350
+Wire Wire Line
+	6000 5350 6000 5450
+Wire Wire Line
+	6000 5450 5850 5450
+Wire Wire Line
+	5850 5150 5850 5200
+Wire Wire Line
+	5850 5400 5850 5450
+Wire Wire Line
+	5850 5450 5850 5500
+Connection ~ 5850 5450
+$Comp
+L power:GND #PWR?
+U 1 1 5E0D135D
+P 5850 5950
+F 0 "#PWR?" H 5850 5700 50  0001 C CNN
+F 1 "GND" H 5855 5777 50  0000 C CNN
+F 2 "" H 5850 5950 50  0001 C CNN
+F 3 "" H 5850 5950 50  0001 C CNN
+	1    5850 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 5900 5850 5950
+Wire Wire Line
+	5850 5150 5850 5100
+Connection ~ 5850 5150
+$Comp
+L power:+12V #PWR?
+U 1 1 5E125884
+P 5850 5100
+F 0 "#PWR?" H 5850 4950 50  0001 C CNN
+F 1 "+12V" H 5865 5273 50  0000 C CNN
+F 2 "" H 5850 5100 50  0001 C CNN
+F 3 "" H 5850 5100 50  0001 C CNN
+	1    5850 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5E13AA40
+P 5400 5700
+F 0 "R?" V 5204 5700 50  0000 C CNN
+F 1 "R_Small" V 5295 5700 50  0000 C CNN
+F 2 "" H 5400 5700 50  0001 C CNN
+F 3 "~" H 5400 5700 50  0001 C CNN
+	1    5400 5700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5550 5700 5500 5700
+Wire Wire Line
+	5300 5700 5250 5700
 Wire Wire Line
 	6350 3200 7100 3200
 Wire Bus Line
