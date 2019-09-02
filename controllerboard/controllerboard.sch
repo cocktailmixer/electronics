@@ -200,7 +200,7 @@ Wire Wire Line
 Wire Wire Line
 	6350 2200 6750 2200
 Text Label 6400 3200 0    50   ~ 0
-rpi_rst
+reset
 Wire Wire Line
 	6350 3400 6750 3400
 Wire Wire Line
@@ -445,12 +445,12 @@ clk_in
 $Comp
 L 74xx:74HC02 U2
 U 5 1 5D785E1E
-P 3450 4800
-F 0 "U2" H 3680 4846 50  0000 L CNN
-F 1 "74HC02" H 3680 4755 50  0000 L CNN
-F 2 "" H 3450 4800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc02" H 3450 4800 50  0001 C CNN
-	5    3450 4800
+P 5800 6050
+F 0 "U2" H 6030 6096 50  0000 L CNN
+F 1 "74HC02" H 6030 6005 50  0000 L CNN
+F 2 "" H 5800 6050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc02" H 5800 6050 50  0001 C CNN
+	5    5800 6050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -997,8 +997,6 @@ Wire Wire Line
 Wire Wire Line
 	2250 4300 2200 4300
 Connection ~ 2250 3900
-Wire Wire Line
-	2250 4300 2450 4300
 Connection ~ 2250 4300
 Wire Wire Line
 	2200 4100 2450 4100
@@ -1019,18 +1017,18 @@ Wire Wire Line
 $Comp
 L power:GND #PWR013
 U 1 1 5E47B1E9
-P 3450 5350
-F 0 "#PWR013" H 3450 5100 50  0001 C CNN
-F 1 "GND" H 3455 5177 50  0000 C CNN
-F 2 "" H 3450 5350 50  0001 C CNN
-F 3 "" H 3450 5350 50  0001 C CNN
-	1    3450 5350
+P 5800 6600
+F 0 "#PWR013" H 5800 6350 50  0001 C CNN
+F 1 "GND" H 5805 6427 50  0000 C CNN
+F 2 "" H 5800 6600 50  0001 C CNN
+F 3 "" H 5800 6600 50  0001 C CNN
+	1    5800 6600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3450 5300 3450 5350
+	5800 6550 5800 6600
 Wire Wire Line
-	3450 4300 3450 4150
+	5800 5550 5800 5400
 NoConn ~ 10250 2700
 NoConn ~ 10250 2800
 NoConn ~ 10250 2900
@@ -1094,7 +1092,7 @@ Wire Wire Line
 Wire Wire Line
 	9250 1700 9250 1600
 Text Label 8300 3600 0    50   ~ 0
-rpi_rst
+reset
 Wire Wire Line
 	8650 3600 8250 3600
 Text Label 8300 3000 0    50   ~ 0
@@ -1261,13 +1259,140 @@ Wire Wire Line
 	6350 2300 7250 2300
 Wire Bus Line
 	6850 1300 8150 1300
+$Comp
+L Transistor_FET:BSS138 Q?
+U 1 1 5DC11F1F
+P 3300 4900
+F 0 "Q?" H 3506 4946 50  0000 L CNN
+F 1 "BSS138" H 3506 4855 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3500 4825 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 3300 4900 50  0001 L CNN
+	1    3300 4900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5DC4E357
+P 3500 4500
+F 0 "J?" H 3580 4492 50  0000 L CNN
+F 1 "emergency-switch" H 3580 4401 50  0000 L CNN
+F 2 "" H 3500 4500 50  0001 C CNN
+F 3 "~" H 3500 4500 50  0001 C CNN
+	1    3500 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DC68F0E
+P 5600 5500
+F 0 "C?" V 5850 5500 50  0000 C CNN
+F 1 "100n" V 5750 5500 50  0000 C CNN
+F 2 "" H 5600 5500 50  0001 C CNN
+F 3 "~" H 5600 5500 50  0001 C CNN
+	1    5600 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DC68F14
+P 5400 5500
+F 0 "#PWR?" H 5400 5250 50  0001 C CNN
+F 1 "GND" H 5405 5327 50  0000 C CNN
+F 2 "" H 5400 5500 50  0001 C CNN
+F 3 "" H 5400 5500 50  0001 C CNN
+	1    5400 5500
+	0    1    1    0   
+$EndComp
 Wire Wire Line
-	6350 3200 6750 3200
+	5400 5500 5500 5500
+$Comp
+L power:GND #PWR?
+U 1 1 5DC9EF3A
+P 3200 5200
+F 0 "#PWR?" H 3200 4950 50  0001 C CNN
+F 1 "GND" H 3205 5027 50  0000 C CNN
+F 2 "" H 3200 5200 50  0001 C CNN
+F 3 "" H 3200 5200 50  0001 C CNN
+	1    3200 5200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5DD04C87
+P 3650 4900
+F 0 "R?" V 3550 4900 50  0000 C CNN
+F 1 "10k" V 3450 4900 50  0000 C CNN
+F 2 "" H 3650 4900 50  0001 C CNN
+F 3 "~" H 3650 4900 50  0001 C CNN
+	1    3650 4900
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	3200 5100 3200 5200
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5DDD76E1
+P 3200 3900
+F 0 "#PWR?" H 3200 3750 50  0001 C CNN
+F 1 "+3.3V" H 3215 4073 50  0000 C CNN
+F 2 "" H 3200 3900 50  0001 C CNN
+F 3 "" H 3200 3900 50  0001 C CNN
+	1    3200 3900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 3900 3200 4000
+$Comp
+L Device:R_Small R?
+U 1 1 5DC3B6D7
+P 3200 4100
+F 0 "R?" V 3004 4100 50  0000 C CNN
+F 1 "10k" V 3095 4100 50  0000 C CNN
+F 2 "" H 3200 4100 50  0001 C CNN
+F 3 "~" H 3200 4100 50  0001 C CNN
+	1    3200 4100
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3200 4200 3200 4300
+Wire Wire Line
+	2250 4300 3200 4300
+Connection ~ 3200 4300
+Text Label 3950 4900 0    50   ~ 0
+reset
+Wire Wire Line
+	3300 4500 3200 4500
+Wire Wire Line
+	3200 4300 3200 4500
+Wire Wire Line
+	3300 4600 3200 4600
+Wire Wire Line
+	3200 4600 3200 4700
+Wire Wire Line
+	3550 4900 3500 4900
+$Comp
+L Device:R_Small R?
+U 1 1 5E0B3444
+P 3650 4300
+F 0 "R?" V 3550 4300 50  0000 C CNN
+F 1 "100k" V 3450 4300 50  0000 C CNN
+F 2 "" H 3650 4300 50  0001 C CNN
+F 3 "~" H 3650 4300 50  0001 C CNN
+	1    3650 4300
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	3550 4300 3200 4300
+Text Label 3800 4300 0    50   ~ 0
+shutdown
+Wire Wire Line
+	3750 4300 4200 4300
+Wire Wire Line
+	3750 4900 4200 4900
+Wire Wire Line
+	6350 3200 7100 3200
 Wire Bus Line
 	6850 1300 6850 3400
 Wire Bus Line
 	8150 1300 8150 3500
-Connection ~ 6750 3200
-Wire Wire Line
-	6750 3200 7100 3200
 $EndSCHEMATC
