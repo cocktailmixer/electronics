@@ -963,8 +963,6 @@ Wire Wire Line
 Connection ~ 2250 3900
 Connection ~ 2250 4300
 Wire Wire Line
-	1600 4200 1400 4200
-Wire Wire Line
 	1600 3800 800  3800
 Wire Wire Line
 	800  3800 800  2000
@@ -1073,7 +1071,7 @@ L Connector_Generic:Conn_01x02 J?
 U 1 1 5DC4E357
 P 3500 4500
 F 0 "J?" H 3580 4492 50  0000 L CNN
-F 1 "emergency-switch" H 3580 4401 50  0000 L CNN
+F 1 "emergency_switch" H 3580 4401 50  0000 L CNN
 F 2 "" H 3500 4500 50  0001 C CNN
 F 3 "~" H 3500 4500 50  0001 C CNN
 	1    3500 4500
@@ -1211,12 +1209,10 @@ Wire Wire Line
 	2200 3700 2750 3700
 Wire Wire Line
 	2200 4100 2750 4100
-Text Label 2250 3300 0    50   ~ 0
-release_valve
 Text Label 2550 3700 0    50   ~ 0
 pump
-Text Label 2400 4100 0    50   ~ 0
-valves_en
+Text Label 2500 4100 0    50   ~ 0
+valves
 Wire Wire Line
 	2200 900  2300 900 
 Wire Wire Line
@@ -1485,14 +1481,154 @@ Wire Wire Line
 	6250 3100 7250 3100
 Wire Wire Line
 	7250 3100 7250 2900
-Wire Wire Line
-	6250 3200 7900 3200
-Wire Bus Line
-	6850 1300 6850 3400
-Wire Bus Line
-	8250 1300 8250 3500
 Text Label 6300 3000 0    50   ~ 0
 sda
 Text Label 6300 3100 0    50   ~ 0
 scl
+Wire Wire Line
+	6250 2700 6750 2700
+Wire Wire Line
+	6250 2600 6750 2600
+Text Label 6300 2700 0    50   ~ 0
+leds_sck
+Text Label 6300 2600 0    50   ~ 0
+leds_miso
+Wire Wire Line
+	5050 3700 4550 3700
+Text Label 4550 3700 0    50   ~ 0
+leds_mosi
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J?
+U 1 1 5E786FD6
+P 7400 4950
+F 0 "J?" H 7450 5367 50  0000 C CNN
+F 1 "Driverboard" H 7450 5276 50  0000 C CNN
+F 2 "" H 7400 4950 50  0001 C CNN
+F 3 "~" H 7400 4950 50  0001 C CNN
+	1    7400 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5E7D8229
+P 7100 4650
+F 0 "#PWR?" H 7100 4500 50  0001 C CNN
+F 1 "+5V" H 7115 4823 50  0000 C CNN
+F 2 "" H 7100 4650 50  0001 C CNN
+F 3 "" H 7100 4650 50  0001 C CNN
+	1    7100 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 4650 7100 4750
+Wire Wire Line
+	7100 4750 7200 4750
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E814D5F
+P 7800 4650
+F 0 "#PWR?" H 7800 4500 50  0001 C CNN
+F 1 "+3.3V" H 7815 4823 50  0000 C CNN
+F 2 "" H 7800 4650 50  0001 C CNN
+F 3 "" H 7800 4650 50  0001 C CNN
+	1    7800 4650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 4650 7800 4750
+Wire Wire Line
+	7800 4750 7700 4750
+$Comp
+L power:GND #PWR?
+U 1 1 5E8627D4
+P 7100 5250
+F 0 "#PWR?" H 7100 5000 50  0001 C CNN
+F 1 "GND" H 7105 5077 50  0000 C CNN
+F 2 "" H 7100 5250 50  0001 C CNN
+F 3 "" H 7100 5250 50  0001 C CNN
+	1    7100 5250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E88B260
+P 7800 5250
+F 0 "#PWR?" H 7800 5000 50  0001 C CNN
+F 1 "GND" H 7805 5077 50  0000 C CNN
+F 2 "" H 7800 5250 50  0001 C CNN
+F 3 "" H 7800 5250 50  0001 C CNN
+	1    7800 5250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 5150 7100 5150
+Wire Wire Line
+	7100 5150 7100 5250
+Wire Wire Line
+	7700 5150 7800 5150
+Wire Wire Line
+	7800 5150 7800 5250
+NoConn ~ 7700 4950
+Text Label 6750 5050 0    50   ~ 0
+valves_si
+Text Label 7750 5050 0    50   ~ 0
+valves_sclk
+Wire Wire Line
+	6750 4850 7200 4850
+Wire Wire Line
+	6750 4950 7200 4950
+Wire Wire Line
+	6750 5050 7200 5050
+Wire Wire Line
+	7700 5050 8150 5050
+Wire Wire Line
+	7700 4850 8150 4850
+Text Label 7750 4850 0    50   ~ 0
+valves_en
+Text Label 1200 4200 0    50   ~ 0
+valves_en
+Wire Wire Line
+	1200 4200 1600 4200
+Text Label 6750 4850 0    50   ~ 0
+valves_csb
+Text Label 6750 4950 0    50   ~ 0
+valves_so
+Wire Wire Line
+	6250 3600 6750 3600
+Wire Wire Line
+	6750 3700 6250 3700
+Wire Wire Line
+	6250 3800 6750 3800
+Wire Wire Line
+	6750 3900 6250 3900
+Wire Wire Line
+	6250 4000 6750 4000
+Text Label 6300 3600 0    50   ~ 0
+valves_sclk
+Text Label 6300 3700 0    50   ~ 0
+valves_si
+Text Label 6300 3800 0    50   ~ 0
+valves_so
+Text Label 6300 3900 0    50   ~ 0
+valves_csb
+Text Label 6300 4000 0    50   ~ 0
+valves
+Wire Wire Line
+	6250 1900 6750 1900
+Wire Wire Line
+	6250 1800 6750 1800
+Text Label 6300 1800 0    50   ~ 0
+pump
+Text Label 5850 5250 0    50   ~ 0
+release_valve
+Wire Bus Line
+	8250 1300 8250 3500
+Wire Wire Line
+	6250 3200 7900 3200
+Wire Bus Line
+	6850 1300 6850 3400
+Text Label 2500 3300 0    50   ~ 0
+ventoff
+Text Label 6300 1900 0    50   ~ 0
+ventoff
 $EndSCHEMATC
