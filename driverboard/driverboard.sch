@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:driverboard-cache
 EELAYER 30 0
 EELAYER END
 $Descr User 9843 5906
@@ -310,17 +311,6 @@ F 3 "~" H 7600 1500 50  0001 C CNN
 	1    7600 1500
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x02 J12
-U 1 1 5D33F5F5
-P 7600 1800
-F 0 "J12" H 7680 1792 50  0000 L CNN
-F 1 "12V output" H 7680 1701 50  0000 L CNN
-F 2 "Connector_Molex:Molex_Micro-Fit_3.0_43650-0200_1x02_P3.00mm_Horizontal" H 7600 1800 50  0001 C CNN
-F 3 "~" H 7600 1800 50  0001 C CNN
-	1    7600 1800
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4050 3000 4050 3250
 Wire Wire Line
@@ -472,15 +462,9 @@ Wire Wire Line
 	7400 1600 7300 1600
 Wire Wire Line
 	7300 1600 7300 1900
-Wire Wire Line
-	7400 1900 7300 1900
 Connection ~ 7300 1900
 Wire Wire Line
 	7300 1900 7300 2000
-Wire Wire Line
-	7400 1800 7200 1800
-Wire Wire Line
-	7200 1800 7200 1500
 Wire Wire Line
 	7200 1500 7200 1400
 Connection ~ 7200 1500
@@ -871,4 +855,21 @@ F 3 "~" H 9100 4600 50  0001 C CNN
 	1    9100 4600
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J12
+U 1 1 5D33F5F5
+P 7600 1900
+F 0 "J12" H 7680 1892 50  0000 L CNN
+F 1 "12V output" H 7680 1801 50  0000 L CNN
+F 2 "Connector_Molex:Molex_Micro-Fit_3.0_43650-0200_1x02_P3.00mm_Horizontal" H 7600 1900 50  0001 C CNN
+F 3 "~" H 7600 1900 50  0001 C CNN
+	1    7600 1900
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7400 1900 7300 1900
+Wire Wire Line
+	7400 1800 7200 1800
+Wire Wire Line
+	7200 1800 7200 1500
 $EndSCHEMATC
