@@ -642,7 +642,7 @@ L Connector_Generic:Conn_02x05_Odd_Even J10
 U 1 1 5D342AA6
 P 6000 2950
 F 0 "J10" H 6050 3367 50  0000 C CNN
-F 1 "data output" H 6050 3276 50  0000 C CNN
+F 1 "SPI output" H 6050 3276 50  0000 C CNN
 F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" H 6000 2950 50  0001 C CNN
 F 3 "~" H 6000 2950 50  0001 C CNN
 	1    6000 2950
@@ -706,7 +706,7 @@ L Connector_Generic:Conn_02x05_Odd_Even J9
 U 1 1 5D340A94
 P 6000 1700
 F 0 "J9" H 6050 2117 50  0000 C CNN
-F 1 "data input" H 6050 2026 50  0000 C CNN
+F 1 "SPI input" H 6050 2026 50  0000 C CNN
 F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" H 6000 1700 50  0001 C CNN
 F 3 "~" H 6000 1700 50  0001 C CNN
 	1    6000 1700
