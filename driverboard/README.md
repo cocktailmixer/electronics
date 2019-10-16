@@ -2,7 +2,7 @@
 ### What is the status?
 - design v01: complete
 - schematic v01: complete
-- layout v01: work in progress
+- layout rev. A: complete
 - gerbers and bom: todo
 - testing: todo
 ### What does it do?
